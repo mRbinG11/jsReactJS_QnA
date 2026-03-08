@@ -24,4 +24,7 @@ getUser()
   })
   .catch((error) => {
     console.error("Error:", error);
+  })
+  .finally(() => {
+    console.info("Promise Completed!");
   });
