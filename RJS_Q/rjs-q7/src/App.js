@@ -4,7 +4,7 @@ import FormComponent from "./components/FormComponent";
 import "./App.css";
 const App = () => {
   // Store list of submitted form data entries (optional for later use)
-  const [formSubmissions, setFormSubmissions] = useState();
+  const [formSubmissions, setFormSubmissions] = useState([]);
   // Function to handle form submission from child component
   const handleFormSubmit = (formData) => {
     console.log("Form Submitted: ", formData); // Log submitted data to console
