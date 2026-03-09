@@ -1,25 +1,33 @@
-import logo from "./logo.svg";
-import "./App.css";
-
-function App() {
+// App.js
+import React from "react";
+import ItemList from "./components/ItemList"; // Import the child component
+import "./App.css"; // Import styles
+const App = () => {
+  // Define a static array of learning goal items
+  const items = [
+    {
+      id: 1,
+      title: "Learn React",
+      description: "Understand components and hooks.",
+    },
+    {
+      id: 2,
+      title: "Build UI",
+      description: "Use React to build user interfaces.",
+    },
+    {
+      id: 3,
+      title: "Deploy App",
+      description: "Host React apps on Netlify or Vercel.",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1>Learning Goals</h1>
+      {/* Pass items array as props to ItemList component */}
+      <ItemList items={items} />
     </div>
   );
-}
+};
 
 export default App;
